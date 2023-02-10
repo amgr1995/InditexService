@@ -1,0 +1,29 @@
+# Eclipse / STS
+.classpath
+.project
+.settings/
+.apt_generated
+.factorypath
+.springBeans
+.sts4-cache
+
+# Intellij
+.idea/
+*.iml
+*.iws
+*.pmd
+
+# VS Code
+.vscode/
+
+# Mac
+.DS_Store
+
+# Maven
+target/
+
+# NPM
+node_modules/
+
+# Docker data
+docker-local/mysql-data/

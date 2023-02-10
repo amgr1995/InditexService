@@ -1,0 +1,62 @@
+tags:
+  - Price Controller
+
+summary: 'Returns a price details for the indicated brand, product and application date'
+
+parameters:
+  - name: brandId
+    in: path
+    required: true
+    description: 'brand id Ex: 1'
+    schema:
+      type: integer
+  - name: productId
+    in: path
+    required: true
+    description: 'product id Ex: 35455'
+    schema:
+      type: integer
+  - name: applicationDate
+    in: query
+    required: true
+    description: 'application date Ex: 2020-06-16T09:00'
+    schema:
+      type: string
+responses:
+  '200':
+    description: Successful response
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/PriceRestResponseDTO'
+  '400':
+    description: The specified brand id, product id and application date is invalid
+  '404':
+    description: A price with the specified brand id, product id and application date was not found
+
+components:
+  schemas:
+    PriceRestResponseDTO:
+      type: object
+      properties:
+        productId:
+          type: Long
+          example: 35455
+        brandId:
+          type: Long
+          example: 1
+        priceList:
+          type: Long
+          example: 4
+        price:
+          type: Double
+          example: 35.45
+        currency:
+          type: String
+          example: EUR
+        startDate:
+          type: String
+          example: 21/12/1995 17:41:31
+        endDate:
+          type: String
+          example: 21/01/1996 00:00:00

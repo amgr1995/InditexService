@@ -1,0 +1,16 @@
+openapi: 3.0.0
+info:
+  version: '1.0.1'
+  title: 'Prueba Inditex Spring Boot API'
+  description: 'This is a simple test of Inditex'
+
+servers:
+  - url: /
+
+paths:
+  /price/{brandId}/{productId}:
+    get:
+      tags:
+        - Price Controller
+      summary: 'Returns a price details for the indicated brand, product and application date'
+      $ref: '/tags/price/getPriceByBrandIdAndProductIdAndApplicationDate.yaml'

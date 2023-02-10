@@ -1,0 +1,56 @@
+databaseChangeLog:
+  - changeSet:
+      id: createTable.PRICES
+      author: antonio.manuel.garcia.ramos
+      changes:
+        - createTable:
+            tableName: PRICES
+            columns:
+              - column:
+                  name: BRAND_ID
+                  type: INT
+                  remarks: brand identifier
+                  constraints:
+                    nullable: false
+              - column:
+                  name: START_DATE
+                  type: TIMESTAMP
+                  remarks: start date on which the indicated price rate applies
+                  constraints:
+                    nullable: false
+              - column:
+                  name: END_DATE
+                  type: TIMESTAMP
+                  remarks: end date on which the indicated price rate applies
+                  constraints:
+                    nullable: false
+              - column:
+                  name: PRICE_LIST
+                  type: BIGINT
+                  remarks: applicable price rate identifier
+                  constraints:
+                    nullable: false
+              - column:
+                  name: PRODUCT_ID
+                  type: BIGINT
+                  remarks: product code identifier
+                  constraints:
+                    nullable: false
+              - column:
+                  name: PRIORITY
+                  type: INT
+                  remarks: prices application disambiguator
+                  constraints:
+                    nullable: false
+              - column:
+                  name: PRICE
+                  type: NUMERIC(10, 2)
+                  remarks: final sale price
+                  constraints:
+                    nullable: false
+              - column:
+                  name: CURRENCY
+                  type: VARCHAR(7)
+                  remarks: iso coin
+                  constraints:
+                    nullable: false

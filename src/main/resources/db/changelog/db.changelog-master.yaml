@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: includes/db.changelog.prices.initialschema.yml
+      relativeToChangelogFile: true
+  - include:
+      file: includes/db.changelog.prices.initialdata.yml
+      relativeToChangelogFile: true

@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert.master.data.prices #supplier
+      author: antonio.manuel.garcia.ramos
+      changes:
+        - sqlFile:
+            path: includes/sql/prices.initialdata.sql
+            relativeToChangelogFile: true
